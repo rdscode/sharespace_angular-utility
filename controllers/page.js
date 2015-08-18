@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the fusePumpAngularApp
  */
-angular.module('tgwcAngularUtility').controller('PageCtrl',
+angular.module('tgwcAngularUtility',[]).controller('PageCtrl',
   ['$scope', 'DrupalPath', '$routeParams', '$sce', 'page',
   function($scope, DrupalPath, $routeParams, $sce, page) {
 
