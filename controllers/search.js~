@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name tgwcAngularUtility.controller:SearchCtrl
+ * @name fusePumpAngularApp.controller:SearchCtrl
  * @description
  * # SearchCtrl
- * Controller of the tgwcAngularUtility
+ * Controller of the fusePumpAngularApp
  */
 angular.module('tgwcAngularUtility')
   .controller('SearchCtrl', ['$scope', '$routeParams', '$location', 'DrupalSearchAPI', 'DrupalBlogSearchAPI', '$anchorScroll', 

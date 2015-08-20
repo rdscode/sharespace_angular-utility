@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc filter
- * @name tgwcAngularUtility.filter:toTrusted
+ * @name fusePumpAngularApp.filter:toTrusted
  * @function
  * @description
  * # toTrusted
- * Filter in the tgwcAngularUtility.
+ * Filter in the fusePumpAngularApp.
  */
 angular.module('tgwcAngularUtility')
   .filter('trustAsHtml', ['$sce', function ($sce) {

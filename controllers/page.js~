@@ -44,7 +44,7 @@ angular.module('tgwcAngularUtility',[]).controller('PageCtrl',
 
 
 
-angular.module('fusePumpAngularApp').controller('ModalCtrl', function ($scope, $modal, $log) {
+angular.module('tgwcAngularUtility').controller('ModalCtrl', function ($scope, $modal, $log) {
 
 
 $scope.open = function (size) {
@@ -70,7 +70,7 @@ $scope.open = function (size) {
 
 
 
-angular.module('fusePumpAngularApp').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+angular.module('tgwcAngularUtility').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
 
 
 

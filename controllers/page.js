@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name fusePumpAngularApp.controller:MainCtrl
+ * @name tgwcAngularUtility.controller:PageCtrl
  * @description
  * # MainCtrl
- * Controller of the fusePumpAngularApp
+ * Controller of the tgwcAngularUtility
  */
 angular.module('tgwcAngularUtility',[]).controller('PageCtrl',
   ['$scope', 'DrupalPath', '$routeParams', '$sce', 'page',

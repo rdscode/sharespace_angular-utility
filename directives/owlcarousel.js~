@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc directive
- * @name tgwcAngularUtility.directive:wrapOwlCarousel
+ * @name fusePumpAngularApp.directive:wrapOwlCarousel
  * @description
  * # OwlCarousel
  */

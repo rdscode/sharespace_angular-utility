@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name tgwcAngularUtility.controller:NextpreviousCtrl
+ * @name fusePumpAngularApp.controller:NextpreviousCtrl
  * @description
  * # NextpreviousCtrl
- * Controller of the tgwcAngularUtility
+ * Controller of the fusePumpAngularApp
  */
 angular.module('tgwcAngularUtility')
   .controller('NextPreviousCtrl', ['$scope', 'DrupalNextPrevious', function ($scope, DrupalNextPrevious) {

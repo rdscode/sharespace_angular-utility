@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name tgwcAngularUtility.controller:MetatagCtrl
+ * @name fusePumpAngularApp.controller:MetatagCtrl
  * @description
  * # MetatagCtrl
- * Controller of the tgwcAngularUtility
+ * Controller of the fusePumpAngularApp
  */
 angular.module('tgwcAngularUtility')
   .controller('MetatagCtrl', ['$scope', 'DrupalSeoLoader', '$location', function ($scope, DrupalSeoLoader, $location) {

@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc filter
- * @name tgwcAngularUtility.filter:TimestampDate
+ * @name fusePumpAngularApp.filter:TimestampDate
  * @function
  * @description
  * # TimestampDate
- * Filter in the tgwcAngularUtility.
+ * Filter in the fusePumpAngularApp.
  */
 angular.module('tgwcAngularUtility')
   .filter('timestampdate', function () {
