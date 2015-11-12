@@ -1,7 +1,7 @@
-{
+  {
   "name": "tgwc-angular-utility",
   "description": "TGWC reusable Angular components library",
-  "main": "",
+  "main": "services/drupalservices.js",
   "moduleType": [],
   "authors": [
     "TheGreatWebCo Devteam"
