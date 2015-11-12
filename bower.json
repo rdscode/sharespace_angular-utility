@@ -1,0 +1,19 @@
+{
+  "name": "tgwc-angular-utility",
+  "description": "TGWC reusable Angular components library",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "TheGreatWebCo Devteam"
+  ],
+  "license": "MIT",
+  "homepage": "thegreatweb.co",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
