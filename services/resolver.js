@@ -4,25 +4,22 @@
  */
 
 angular.module('tgwcAngularUtility')
-    .service("Resolver", function(DrupalNodeByPath, $route, $q, $location, BrandService) {
+    .service("Resolver", function(DrupalNodeByPath, $q, $location) {
 
-        var page = function () {
+        var page = function (path, options) {
             var deferred = $q.defer();
-            DrupalNodeByPath.get(
-                $route.current.params.page,
-                '',
-                BrandService.getBrand()
-            ).success(function (response) {
+            DrupalNodeByPath.get(path, options)
+                .success(function (response) {
                     // console.log('success');
                     // console.log(response);
-                    if (response[0] == 'E') {
-                        $location.path('page-not-found');
+                    if (response.error) {
+                        window.location.href = '404.html';
                     }
                     deferred.resolve(response);
                 }).error (function (response) {
-                $location.path('404.html');
-                // console.log('error');
-                console.log(response);
+                    //bwindow.location.href = '404.html';
+                    // console.log('error');
+                    console.log(response);
             });
             return deferred.promise;
         };
