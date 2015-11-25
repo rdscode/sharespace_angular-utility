@@ -26,9 +26,6 @@ drupalServices.factory('DrupalNodeByNid', function ($http, BACKEND_CONFIG) {
 drupalServices.factory('DrupalNodeByPath', function ($http, BACKEND_CONFIG) {
     return {
         get: function (path, langcode, brand) {
-            console.log(path);
-            var rpath = BACKEND_CONFIG.baseResource+path+"?_format=json&brand="+brand;
-            console.log(rpath);
             if (langcode == '') {
                 return $http.get(BACKEND_CONFIG.baseResource + "/" + path + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
             } else {
