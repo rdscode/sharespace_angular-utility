@@ -4,4 +4,7 @@
  * Load first!
  */
 
-angular.module('tgwcAngularUtility', []);
+angular.module('tgwcAngularUtility', [])
+    .config(function() {
+        console.log('TGWC Angular Utility module loaded!');
+    });
