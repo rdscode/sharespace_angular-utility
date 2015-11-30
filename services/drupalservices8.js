@@ -6,9 +6,7 @@
 var drupalServices = angular.module('drupalServices', ['ngResource']);
 
 drupalServices.headers = {};
-
-// drupalServices.baseResource = 'http://fusepump-server.bitmachine.co.uk';
-// drupalServices.headers = {"Authorization": "Basic ZnVzZXB1bXBzZXJ2ZXI6ZnVzM3B1bXBzM3J2M3I="}
+drupalServices.format = 'json';
 
 drupalServices.factory('DrupalNodes', function ($resource, CONFIG) {
     return CONFIG.baseResource;
@@ -16,6 +14,7 @@ drupalServices.factory('DrupalNodes', function ($resource, CONFIG) {
 
 drupalServices.factory('DrupalNodeByNid', function ($http, CONFIG) {
     return {
+
         get: function (nid, langcode, brand) {
             if (langcode == '') {
                 return $http.get(CONFIG.baseResource+"/backend/node/" + nid + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
@@ -28,6 +27,7 @@ drupalServices.factory('DrupalNodeByNid', function ($http, CONFIG) {
 
 drupalServices.factory('DrupalNodeByPath', function ($http, CONFIG) {
     return {
+
         get: function (path, langcode, brand) {
             if (langcode == '') {
                 return $http.get(CONFIG.baseResource+"/backend/" + path + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
