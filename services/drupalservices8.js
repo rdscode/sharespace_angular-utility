@@ -14,26 +14,24 @@ drupalServices.factory('DrupalNodes', function ($resource, CONFIG) {
 
 drupalServices.factory('DrupalNodeByNid', function ($http, CONFIG) {
     return {
-
-        get: function (nid, langcode, brand) {
-            if (langcode == '') {
-                return $http.get(CONFIG.baseResource+"/backend/node/" + nid + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
-            } else {
-                return $http.get(CONFIG.baseResource+"/backend/" + langcode + "/node/" + nid + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
-            }
+        get: function (nid, langcode, options) {
+            return $http.get(
+                CONFIG.baseResource + "/" + langcode + "/node/" + nid +
+                '?_format=' + drupalServices.format + '&' +
+                jQuery.param(options), {headers: drupalServices.headers}
+            );
         }
     }
 });
 
 drupalServices.factory('DrupalNodeByPath', function ($http, CONFIG) {
     return {
-
-        get: function (path, langcode, brand) {
-            if (langcode == '') {
-                return $http.get(CONFIG.baseResource+"/backend/" + path + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
-            } else {
-                return $http.get(CONFIG.baseResource+"/backend/" + langcode + "/" + path + "?_format=json&brand=" + brand, {headers: drupalServices.headers});
-            }
+        get: function (path, options) {
+            return $http.get(
+                CONFIG.baseResource + "/" + path +
+                '?_format=' + drupalServices.format + '&' +
+                jQuery.param(options), {headers: drupalServices.headers}
+            );
         }
     }
 });
