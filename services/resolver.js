@@ -17,9 +17,9 @@ angular.module('tgwcAngularUtility')
                     }
                     deferred.resolve(response);
                 }).error (function (response) {
-                    //bwindow.location.href = '404.html';
-                    // console.log('error');
-                    console.log(response);
+                //bwindow.location.href = '404.html';
+                // console.log('error');
+                console.log(response);
             });
             return deferred.promise;
         };
