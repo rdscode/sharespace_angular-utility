@@ -35,3 +35,15 @@ drupalServices.factory('DrupalNodeByPath', function ($http, CONFIG) {
         }
     }
 });
+
+drupalServices.factory('DrupalEntityById', function ($http, CONFIG) {
+   return {
+       get: function (type, id, options) {
+           return $http.get(
+               CONFIG.baseResource + "/" + type + "/" + id +
+               '?_format=' + drupalServices.format + '&' +
+               jQuery.param(options), {headers: drupalServices.headers}
+           )
+       }
+   }
+});
