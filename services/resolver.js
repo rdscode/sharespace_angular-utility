@@ -13,11 +13,11 @@ angular.module('tgwcAngularUtility')
                     // console.log('success');
                     // console.log(response);
                     if (response.error) {
-                        window.location.href = '404.html';
+                        window.location.href = 'page-not-found';
                     }
                     deferred.resolve(response);
                 }).error (function (response) {
-                //bwindow.location.href = '404.html';
+                window.location.href = 'page-not-found';
                 // console.log('error');
                 console.log(response);
             });
