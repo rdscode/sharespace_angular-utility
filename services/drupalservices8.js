@@ -46,4 +46,15 @@ drupalServices.factory('DrupalEntityById', function ($http, CONFIG) {
            )
        }
    }
+})
+
+drupalServices.factory('DrupalNextPrevious', function($http, CONFIG) {
+  return {
+    get: function(type, nid) {
+      return $http.get(
+        CONFIG.baseResource + "/rest/nextprevious/" + type + "/" + nid + '?_format=' + drupalServices.format, 
+        {headers: drupalServices.headers}
+      )
+    }
+  }
 });

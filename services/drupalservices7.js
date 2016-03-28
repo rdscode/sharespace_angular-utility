@@ -91,11 +91,11 @@ drupalServices.factory('DrupalRememberPardotUser', function($resource){
   });
 });
 
-drupalServices.factory('DrupalNextPrevious', function($http) {
+/*drupalServices.factory('DrupalNextPrevious', function($http) {
   return {get: function(nid, type) {
     return $http.get(drupalServices.baseResource+"/nextprevious.json?nid="+nid+"&type="+type, {headers: drupalServices.headers});
   }};
-});
+});*/
 
 drupalServices.factory('DrupalFilteredSelect', function($http) {
   return {get: function(field, type, from) {
