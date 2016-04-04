@@ -16,7 +16,7 @@ drupalServices.factory('DrupalNodeByNid', function ($http, CONFIG) {
     return {
         get: function (nid, langcode, options) {
             return $http.get(
-                CONFIG.baseResource + "/" + langcode + "/node/" + nid +
+                CONFIG.baseResource + "/" + langcode + "/nodez/" + nid +
                 '?_format=' + drupalServices.format + '&' +
                 jQuery.param(options), {headers: drupalServices.headers}
             );
@@ -50,9 +50,10 @@ drupalServices.factory('DrupalEntityById', function ($http, CONFIG) {
 
 drupalServices.factory('DrupalNextPrevious', function($http, CONFIG) {
   return {
-    get: function(type, nid) {
+    get: function(type, nid, brand) {
       return $http.get(
-        CONFIG.baseResource + "/rest/nextprevious/" + type + "/" + nid + '?_format=' + drupalServices.format, 
+        CONFIG.baseResource + "/rest/nextprevious/" + type + "/" + nid + 
+        '?_format=' + drupalServices.format +'&brand='+ brand,  
         {headers: drupalServices.headers}
       )
     }
