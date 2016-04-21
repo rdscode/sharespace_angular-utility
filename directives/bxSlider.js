@@ -4,7 +4,6 @@
 
 angular.module('tgwcAngularUtility')
     .directive('wrapBxSlider', function () {
-        alert();
         return {
             link: function (scope, elem, attr) {
 
