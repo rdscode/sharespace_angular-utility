@@ -16,7 +16,6 @@ angular.module('tgwcAngularUtility')
       };
       
      var loadCarouselActions = function(){
-      console.log('adding actions');
       angular.element(".owlcarousel_next").click(function(){
         angular.element(".owlcarousel_next").attr("href", "");
         element.trigger('owl.next');
