@@ -6,5 +6,4 @@
 
 angular.module('tgwcAngularUtility', [])
     .config(function() {
-        console.log('TGWC Angular Utility module loaded!');
     });
