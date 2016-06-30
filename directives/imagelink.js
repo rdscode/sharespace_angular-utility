@@ -12,8 +12,6 @@ angular.module('tgwcAngularUtility')
       restrict: 'E',
       template: '<a ng-href="{{link_href}}" ng-click="open()"><img ng-src="{{src}}" alt="{{alt}}" class="img-responsive" /></a>',
       link: function postLink(scope, element, attrs) {
-        console.log('imagelink');
-        console.log('element');
         var loadImageLink = function() {
           scope.link_href = '';
           scope.href = attrs.href;
@@ -34,7 +32,6 @@ angular.module('tgwcAngularUtility')
             controller:  function($scope, $modalInstance){
               $scope.href = scope.href;
               $scope.close = function() {
-                console.log('close modal');
                 $modalInstance.dismiss();
               }
             },
@@ -48,9 +45,7 @@ angular.module('tgwcAngularUtility')
             }
           });
           modalInstance.result.then(function(){
-            console.log('Finished');
           }, function(){
-            console.log('Modal dismissed at : ' + new Date());
             modalInstance.template = '';
           });
           return false;

@@ -17,7 +17,6 @@ angular.module('tgwcAngularUtility')
 
     $scope.loadSearch = function() {
       $scope.userInput = $routeParams.query;
-      console.log($routeParams);
       if (typeof $routeParams.type != 'undefined' && $routeParams.type == 'blog') {
         $scope.results = DrupalBlogSearchAPI.query({query: $routeParams.query, limit: 8, page:$routeParams.page}, function(results) {
           $scope.getTotal();
@@ -27,7 +26,6 @@ angular.module('tgwcAngularUtility')
           $scope.getTotal();
         });
       }
-      console.log($scope.results);
     };
 
     $scope.getTotal = function() {
