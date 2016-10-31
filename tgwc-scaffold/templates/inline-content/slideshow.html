@@ -1,0 +1,49 @@
+<div class="wrapper">
+	<div class="container slideshow-strip slideshow">
+	  <div class="row">
+		  <div class="col-xs-12 col-sm-12 col-md-12">
+		    <wrap-owlcarousel2 class="owl-carousel" render-watch="dummySlider" data-options="{
+							loop:true,
+					    margin:0,
+					    responsiveClass:true,
+					    nav:true,
+					    dots:true,
+					    dotsEach:true,
+					    responsive:{
+					        0:{
+					            items:1,
+					            nav:true,
+					            dots:true,
+					        },
+					        600:{
+					            items:1,
+					            nav:false,
+					            dots:true,
+					            dots:true,
+	
+					        },
+					        1000:{
+					            items:1,
+					            nav:true,
+					            loop:false,
+					            dots:true
+					        }
+					    }
+		         }">
+			    <div class="item" ng-repeat="slider in dummySlider">
+		        <a href="" class="pane-link">
+			        <div class="panel panel-default">
+		            <div class="panel-body no-padding">
+		               <img src="{{slider.image}}" class="img-responsive">
+		            </div>
+		            <div class="panel-footer">
+						      	<h4 class="light-font">Lorem Ipsum</h4>							
+		            </div>
+		        	</div>
+		        </a>
+			    </div>
+		    </wrap-owlcarousel2>
+	    </div>
+		</div>
+	</div>
+</div>

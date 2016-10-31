@@ -1,0 +1,40 @@
+.header {
+	.wrapper-one {
+		.logo {
+		margin: 30px 0;	
+		}
+	}
+}
+
+.header {
+	.wrapper-two {
+	background: $gray-lighter;	
+	}
+}
+
+
+.nav {
+	li {
+	}
+	a { 
+	color: $black;	
+	}
+	a:hover {
+	}
+}
+
+
+// Nav height can be differ from template to template
+nav.horizontal-scroll-nav{
+  height: 40px;
+  overflow: hidden;
+  ul{
+    height: 50px;
+  }
+}
+
+.footer {
+	.wrapper {
+	background: $black;	
+	}
+}
