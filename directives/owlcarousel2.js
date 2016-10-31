@@ -8,7 +8,7 @@ angular.module('tgwcAngularUtility')
 			$timeout(function() {
 				var loadCarousel = function () {
 					$timeout(function() {
-						var options = scope.$eval($(element).attr('data-options'));
+						var options = scope.$eval(jQuery(element).attr('data-options'));
 						element.owlCarousel(options);
 					}, 10);
 				};
