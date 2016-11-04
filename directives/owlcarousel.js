@@ -11,7 +11,7 @@ angular.module('tgwcAngularUtility')
     var linker = function(scope,element,attr){
 
       var loadCarousel = function(){
-        var options = scope.$eval($(element).attr('data-options'));
+        var options = scope.$eval(jQuery(element).attr('data-options'));
         element.owlCarousel(options);
       };
       
