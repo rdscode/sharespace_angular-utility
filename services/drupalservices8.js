@@ -16,7 +16,7 @@ drupalServices.factory('DrupalNodeByNid', function ($http, CONFIG) {
     return {
         get: function (nid, langcode, options) {
             return $http.get(
-                CONFIG.baseResource + "/" + langcode + "/nodez/" + nid +
+                CONFIG.baseResource + "/" + langcode + "/node/" + nid +
                 '?_format=' + drupalServices.format + '&' +
                 jQuery.param(options), {headers: drupalServices.headers}
             );
