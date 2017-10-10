@@ -9,14 +9,14 @@ angular.module('tgwcAngularUtility')
         var page = function (path, options) {
             var deferred = $q.defer();
             DrupalNodeByPath.get(path, options)
-                .success(function (response) {
+                .then(function (response) {
                     if (response.error) {
                         window.location.href = 'page-not-found';
                     }
-                    deferred.resolve(response);
-                }).error (function (response) {
-                window.location.href = 'page-not-found';
-            });
+                    deferred.resolve(response.data);
+                }, function(error) {
+                  window.location.href = 'page-not-found';
+                });
             return deferred.promise;
         };
 
