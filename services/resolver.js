@@ -8,14 +8,15 @@ angular.module('tgwcAngularUtility')
 
         var page = function (path, options) {
             var deferred = $q.defer();
+            var savePath = path;
             DrupalNodeByPath.get(path, options)
                 .success(function (response) {
                     if (response.error) {
-                        window.location.href = 'page-not-found';
+                        window.location.href = 'page-not-found#' + savePath;
                     }
                     deferred.resolve(response);
                 }).error (function (response) {
-                window.location.href = 'page-not-found';
+                window.location.href = 'page-not-found#' + savePath;
             });
             return deferred.promise;
         };
