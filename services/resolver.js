@@ -4,7 +4,7 @@
  */
 
 angular.module('tgwcAngularUtility')
-    .service("Resolver", function(DrupalNodeByPath, $q, $location) {
+    .service("Resolver", function(DrupalNodeByPath, $q, PageNotFoundRedirect) {
 
         var page = function (path, options) {
             var deferred = $q.defer();
@@ -12,11 +12,11 @@ angular.module('tgwcAngularUtility')
             DrupalNodeByPath.get(path, options)
                 .then(function (response) {
                     if (response.error) {
-                        window.location.href = 'page-not-found?src=' + savePath;
+                      PageNotFoundRedirect.redirect(savePath);
                     }
                     deferred.resolve(response.data);
                 }, function(error) {
-                  window.location.href = 'page-not-found?src=' + savePath;
+                  PageNotFoundRedirect.redirect(savePath);
                 });
             return deferred.promise;
         };
